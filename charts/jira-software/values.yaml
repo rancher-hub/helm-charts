@@ -116,6 +116,8 @@ envVars:
 
 env:
   []
+  - ATL_PROXY_NAME: jira.rancher.vm
+  - ATL_PROXY_PORT: 80
   # - name: VARIABLE
   #   value: my-value
 
@@ -134,4 +136,4 @@ psql:
 ## ref: https://hub.helm.sh/charts/bitnami/postgresql/4.2.2
 ##
 postgresql:
-  enabled: false
+  enabled: true

@@ -22,8 +22,3 @@ maintainers:
 annotations:
   artifacthub.io/changes: |
     - Update default JVM config
-dependencies:
-  - name: postgresql
-    version: 11.11.0
-    repository: https://charts.bitnami.com/bitnami/
-    condition: postgresql.enabled
