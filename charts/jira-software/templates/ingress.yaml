@@ -35,5 +35,6 @@ spec:
                 name: {{ $fullName }}
                 port:
                   name: http
+            pathType: ImplementationSpecific
   {{- end }}
 {{- end }}
