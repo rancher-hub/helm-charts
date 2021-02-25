@@ -1,6 +1,7 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "jira-software.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
+{{- $servicePort := .Values.service.port -}}
 {{- if semverCompare ">=1.14-0" .Capabilities.KubeVersion.GitVersion -}}
 apiVersion: networking.k8s.io/v1
 {{- else -}}
@@ -36,7 +37,7 @@ spec:
               service:
                 name: {{ $fullName }}
                 port:
-                  name: 8080
+                  name: {{ $servicePort }}
             pathType: ImplementationSpecific
   {{- end }}
 {{- end }}
