@@ -69,7 +69,6 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - jira.rancher.vm
     # - jira.local
   tls:
     []
